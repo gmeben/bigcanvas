@@ -14,5 +14,8 @@
     "vue"
   ],
   "author": "https://github.com/gmeben",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
