@@ -17,8 +17,8 @@
         <a href="/">Home</a>
     </nav>
     <main>
-        <div id="pickr"></div>
         <canvas id="canvas" width="500" height="500" style="border: 1px solid #000"></canvas>
+        <div id="pickr"></div>
     </main>
     <script src="jquery-3.5.1.js"></script>
     <script src="pickr/dist/pickr.min.js"></script>
