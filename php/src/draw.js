@@ -5,6 +5,8 @@ $(document).ready(() => {
     const canvasWidth = canvas.width()
     const canvasHeight = canvas.height()
     const pixelSize = canvasWidth / gridDimension
+    let selectedColor = '#ffc90e'
+    let enabled = true
 
     ctx.strokeStyle = 'rgba(0,0,0,0.1)'
     for (let i = 0; i < gridDimension; i++) {
@@ -23,6 +25,9 @@ $(document).ready(() => {
 
     canvas.on('mousemove touchmove touchstart mousedown', mouseFill)
     function mouseFill(e) {
+        if (!enabled) {
+            return
+        }
         let offsetX = e.offsetX
         let offsetY = e.offsetY
 
@@ -34,7 +39,7 @@ $(document).ready(() => {
     }
 
     function fillPixel(pixel) {
-        ctx.fillStyle = '#000000'
+        ctx.fillStyle = selectedColor
         ctx.fillRect(pixel[0] * pixelSize, pixel[1] * pixelSize, pixelSize - 1, pixelSize - 1)
     }
 
@@ -62,7 +67,6 @@ $(document).ready(() => {
         components: {
     
             // Main components
-            preview: true,
             opacity: true,
             hue: true,
     
@@ -73,10 +77,24 @@ $(document).ready(() => {
                 hsla: true,
                 hsva: true,
                 cmyk: true,
-                input: true,
-                clear: true,
-                save: true
+                input: true
             }
         }
     });
+
+    pickr.on('init', () => {
+        pickr.setColor(selectedColor)
+    })
+    pickr.on('show', ()=> {
+        enabled = false
+    })
+    pickr.on('hide', ()=> {
+        setTimeout(() => {
+            enabled = true
+        }, 300)
+    })
+    pickr.on('change', () => {
+        selectedColor = pickr.getColor().toHEXA().toString()
+        pickr.setColor(selectedColor)
+    })
 })
