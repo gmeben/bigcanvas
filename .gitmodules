@@ -1,0 +1,3 @@
+[submodule "php/src/pickr"]
+	path = php/src/pickr
+	url = https://github.com/Simonwep/pickr
