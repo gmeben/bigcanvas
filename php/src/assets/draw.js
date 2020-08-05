@@ -48,20 +48,8 @@ $(document).ready(() => {
         theme: 'classic', // or 'monolith', or 'nano'
     
         components: {
-    
-            // Main components
             opacity: true,
             hue: true,
-    
-            // Input / output Options
-            interaction: {
-                hex: true,
-                rgba: true,
-                hsla: true,
-                hsva: true,
-                cmyk: true,
-                input: true
-            }
         }
     });
 
