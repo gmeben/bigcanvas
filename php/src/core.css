@@ -4,4 +4,9 @@ body {
 .pcr-button {
     box-shadow: 0 0 0 1px #fff, 0 0 0 3px #000;
 }
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 502px;
 }
