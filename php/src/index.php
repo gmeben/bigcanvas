@@ -13,10 +13,11 @@
 <body>
     <main>
         <h1>bigcanvas PHP</h1>
-        <nav>
-            <a href="draw.php">Draw</a>
-        </nav>
+        <section id="bigcanvas-wrapper">
+            <canvas id="bigcanvas"></canvas>
+        </section>
     </main>
+    <script src="/assets/jquery-3.5.1.js"></script>
     <script src="/assets/index.js"></script>
 </body>
 </html>

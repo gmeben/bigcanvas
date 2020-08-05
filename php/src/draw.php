@@ -18,7 +18,7 @@
         <a href="/">Save and Exit</a>
     </nav>
     <main>
-        <canvas id="canvas" width="500" height="500" style="border: 1px solid #000"></canvas>
+        <canvas id="canvas" width="500" height="500"></canvas>
         <div id="pickr"></div>
     </main>
     <script src="/assets/jquery-3.5.1.js"></script>
