@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <title>bigcanvas PHP</title>
+    <link rel="stylesheet" type="text/css" href="core.css?v=<?=filemtime('core.css')?>" >
 </head>
 <body>
     <h1>bigcanvas PHP</h1>
