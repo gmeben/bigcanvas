@@ -8,15 +8,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <title>bigcanvas PHP | draw</title>
-    <link rel="stylesheet" type="text/css" href="core.css?v=<?=filemtime('core.css')?>" >
+    <link rel="stylesheet" type="text/css" href="pickr/dist/themes/classic.min.css">
+    <link rel="stylesheet" type="text/css" href="core.css?v=<?=filemtime('core.css')?>">
 </head>
 <body>
     <h1>bigcanvas PHP | Draw</h1>
     <nav>
         <a href="/">Home</a>
     </nav>
-    <canvas id="canvas" width="500" height="500" style="border: 1px solid #000"></canvas>
+    <main>
+        <div id="pickr"></div>
+        <canvas id="canvas" width="500" height="500" style="border: 1px solid #000"></canvas>
+    </main>
     <script src="jquery-3.5.1.js"></script>
+    <script src="pickr/dist/pickr.min.js"></script>
     <script src="draw.js"></script>
 </body>
 </html>
