@@ -9,7 +9,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <title>bigcanvas PHP | draw</title>
     <link rel="stylesheet" type="text/css" href="/pickr/dist/themes/classic.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/core.css?v=<?=filemtime('core.css')?>">
+    <link rel="stylesheet" type="text/css" href="/assets/core.css?v=<?=filemtime('assets/core.css')?>">
 </head>
 <body>
     <h1>bigcanvas PHP | Draw</h1>
