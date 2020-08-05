@@ -26,6 +26,9 @@ $(document).ready(() => {
         let offsetX = e.offsetX
         let offsetY = e.offsetY
 
+        if (e.buttons !== 1) {
+            return
+        }
         pixel = [Math.floor(offsetX / pixelSize), Math.floor(offsetY / pixelSize)]
         fillPixel(pixel)
     }
