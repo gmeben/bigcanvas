@@ -12,6 +12,8 @@
 </head>
 <body>
     <h1>bigcanvas PHP</h1>
-    <a href="draw.php">Draw</a>
+    <nav>
+        <a href="draw.php">Draw</a>
+    </nav>
 </body>
 </html>

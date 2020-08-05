@@ -11,7 +11,10 @@
     <link rel="stylesheet" type="text/css" href="core.css?v=<?=filemtime('core.css')?>" >
 </head>
 <body>
-    <h1><a href="/">bigcanvas PHP</a> | draw</h1>
+    <h1>bigcanvas PHP | Draw</h1>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
     <canvas id="canvas" width="500" height="500" style="border: 1px solid #000"></canvas>
     <script src="jquery-3.5.1.js"></script>
     <script src="draw.js"></script>
