@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>bigcanvas PHP</h1>
+    <a href="draw.php">Draw</a>
 </body>
 </html>
