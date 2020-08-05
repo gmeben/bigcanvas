@@ -6,6 +6,6 @@
     <title>bigcanvas PHP</title>
 </head>
 <body>
-    
+    <h1>bigcanvas PHP</h1>
 </body>
 </html>
