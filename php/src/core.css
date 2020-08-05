@@ -1,3 +1,7 @@
 body {
     text-align: center;
 }
+.pcr-button {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px #000;
+}
+}
