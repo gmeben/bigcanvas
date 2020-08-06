@@ -17,7 +17,8 @@
             <canvas id="bigcanvas"></canvas>
         </section>
     </main>
-    <script src="/assets/jquery-3.5.1.js"></script>
-    <script src="/assets/index.js"></script>
+    <script type="text/javascript" src="/assets/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script type="text/javascript" src="/assets/index.js"></script>
 </body>
 </html>
