@@ -7,6 +7,7 @@ $(document).ready(() => {
     const pixelSize = canvasWidth / gridDimension
     let selectedColor = '#ffc90e'
     let enabled = true
+    let filledPixels = {}
 
     ctx.strokeStyle = 'rgba(0,0,0,0.1)'
     for (let i = 0; i < gridDimension; i++) {
@@ -39,9 +40,23 @@ $(document).ready(() => {
     }
 
     function fillPixel(pixel) {
+        let key = `${pixel[0]}, ${pixel[1]}`
+        filledPixels[key] = selectedColor
+
         ctx.fillStyle = selectedColor
         ctx.fillRect(pixel[0] * pixelSize, pixel[1] * pixelSize, pixelSize - 1, pixelSize - 1)
     }
+
+    window.save = function(x, y) {
+        let data = {
+            x: x,
+            y: y,
+            data: filledPixels
+        }
+        $.post('draw.php?submit=1', data, (response) => {
+            $('body').append(response)
+        })
+    } 
 
     const pickr = Pickr.create({
         el: '#pickr',

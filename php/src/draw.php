@@ -1,3 +1,12 @@
+<?php
+if ($_REQUEST['submit']) {
+    print_r($_REQUEST);
+    return;
+}
+
+$x = intval($_REQUEST['x']);
+$y = intval($_REQUEST['y']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +24,7 @@
     <h1>bigcanvas PHP | Draw</h1>
     <nav>
         <a href="/">Home</a>
-        <a href="/">Save and Exit</a>
+        <button onclick="save(<?=$x?>, <?=$y?>)">Save and Exit</a>
     </nav>
     <main>
         <canvas id="canvas" width="500" height="500"></canvas>
