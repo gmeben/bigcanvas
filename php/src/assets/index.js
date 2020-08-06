@@ -35,14 +35,23 @@ $(document).ready(() => {
     $('#bigcanvas-wrapper').css({width: width + 2})
 
     canvas.on('mousemove', (e) => {
-        let pixel = [Math.floor(e.offsetX / (pixelSize * dimension)), Math.floor(e.offsetY / (pixelSize * dimension))]
-        if (pixel[0] < 0 || pixel[1] < 0 || pixel[0] >= repeatX || pixel[1] >= repeatY) {
+        let pixel = [
+            Math.floor(e.offsetX / (pixelSize * dimension)), 
+            Math.floor(e.offsetY / (pixelSize * dimension))
+        ]
+        if (pixel[0] < 0 
+            || pixel[1] < 0 
+            || pixel[0] >= repeatX 
+            || pixel[1] >= repeatY) {
             return
         }
 
         if (!selectedBox) {
             selectedBox = $('<div id="selected-box"></div>')
-            selectedBox.css({width: dimension * pixelSize - 2, height: dimension * pixelSize - 2})
+            selectedBox.css({
+                width: dimension * pixelSize - 2, 
+                height: dimension * pixelSize - 2
+            })
             $('#bigcanvas-wrapper').prepend(selectedBox)
         }
         selectedBox.css({
