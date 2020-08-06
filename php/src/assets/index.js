@@ -32,8 +32,12 @@ $(document).ready(() => {
         ctx.stroke()
     }
 
+    // Set width of container dynamically
     $('#bigcanvas-wrapper').css({width: width + 2})
 
+    canvas.on('click', (e) => {
+        selectBox(e)
+    })
     canvas.on('mousemove', (e) => {
         let pixel = [
             Math.floor(e.offsetX / (pixelSize * dimension)), 
@@ -59,4 +63,18 @@ $(document).ready(() => {
             top: pixel[1] * pixelSize * dimension
         });
     })
+
+    let selected = 0
+    function selectBox(e) {
+        if (selected) {
+            return
+        }
+        selected = 1
+
+        let pixel = [
+            Math.floor(e.offsetX / (pixelSize * dimension)),
+            Math.floor(e.offsetY / (pixelSize * dimension))
+        ]
+        window.location = `/draw.php?x=${pixel[0]}&y=${pixel[1]}`
+    }
 })
