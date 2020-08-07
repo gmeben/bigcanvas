@@ -1,6 +1,7 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+import sys
 
 # Use the application default credentials
 cred = credentials.Certificate('creds.json')
@@ -8,8 +9,15 @@ firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-data = {
+key = sys.argv[1] + ',' + sys.argv[2]
+filename = sys.argv[3]
 
+f = open(filename, 'r')
+value = "\n".join(f.readlines())
+data = {
+  unicode('data') : unicode(value)
 }
 
-db.collection(u'app').document(u'grid').set(data)
+db.collection(u'app').document(unicode'grid').set(data)
+
+print 1
