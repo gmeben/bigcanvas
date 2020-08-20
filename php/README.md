@@ -1,11 +1,13 @@
 # bigcanvas PHP
 
+This is a Docker-driven implementation of [a tutorial by TechLead on YouTube](https://www.youtube.com/watch?v=t1aXuJkmTg8).
+
 ## Setup
 
 ### Prerequisites
 
 * A command line
-* Docker
+* Docker Compose
 
 ### Steps
 
